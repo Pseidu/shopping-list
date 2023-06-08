@@ -20,16 +20,17 @@ function addEventListenersToListElements()
 }
 
 function createListElement() {
+	// Create new li
 	var li = document.createElement("li");
 	li.appendChild(document.createTextNode(input.value + " "));
-	
+	// Create button & append to li
 	var deleteButton = document.createElement("button");
 	deleteButton.appendChild(document.createTextNode("Delete"));
 	li.appendChild(deleteButton);
-	
+	// Append li to list
 	ul.appendChild(li);
 	input.value = "";
-
+	// Add event listeners
 	addEventListenersToListElements();
 }
 
